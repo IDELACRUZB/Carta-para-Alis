@@ -1,72 +1,35 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#000000">
-    <title>Carta para Alis</title>
-
-    <link rel="stylesheet" href="../css/style_carta.css">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/style_carta.css" />
 </head>
-
 <body>
+  <header class="top-bar">
+    <div class="logo">❤️ Carta para Alis</div>
+    <div class="top-right">
+      <button id="audioBtn" class="login-btn" onclick="toggleAudio()">Reproducir Música</button>
+      <audio id="miAudio" loop preload="auto">
+        <source src="../audio/amor_sin_comdicion_pista.mp3" type="audio/mpeg">
+      </audio>
+      <button class="login-btn"><a href="../index.html">Inicio</a></button>
+    </div>
+  </header>
 
-    <header class="top-bar">
+  <section class="hero">
+    <div class="overlay">
+      <iframe width="800" height="550" src="../pdf/Carta_Para_Alis.pdf#toolbar=0&navpanes=0&scrollbar=1"></iframe>
+    </div>
+    <div class="grid">
+      <!-- Aquí irán imágenes de fondo -->
+      <script src="../js/script_carta.js"></script>
+    </div>
+  </section>
 
-        <div class="logo">
-            ❤️ Carta para Alis
-        </div>
-
-        <div class="top-right">
-
-            <button id="audioBtn"
-                    class="login-btn"
-                    onclick="toggleAudio()">
-                Reproducir Música
-            </button>
-
-            <audio id="miAudio" loop preload="auto">
-                <source src="../audio/amor_sin_comdicion_pista.mp3"
-                        type="audio/mpeg">
-            </audio>
-
-            <a href="../index.html" class="login-btn">
-                Inicio
-            </a>
-
-        </div>
-
-    </header>
-
-
-    <section class="hero">
-
-        <div class="overlay">
-
-            <div class="pdf-container">
-                <iframe
-                    src="../pdf/Carta_Para_Alis.pdf#toolbar=0&navpanes=0&scrollbar=1"
-                    title="Carta para Alis"
-                    loading="lazy">
-                </iframe>
-            </div>
-
-        </div>
-
-        <div class="grid">
-            <!-- Aquí irán imágenes de fondo -->
-        </div>
-
-    </section>
-
-
-    <footer class="benefits">
-        <p>By IsDB</p>
-    </footer>
-
-
-    <script src="../js/script_carta.js"></script>
-
+  <footer class="benefits">
+    <p>By IsDB</p>
+  </footer>
 </body>
 </html>
