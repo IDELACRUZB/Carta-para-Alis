@@ -1,348 +1,94 @@
-
-/* =========================================
-   CONFIGURACIÓN GENERAL
-========================================= */
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-html, body {
-    width: 100%;
-    min-height: 100%;
-}
-
 body {
-    font-family: Roboto, sans-serif;
-    line-height: 1.4;
-    background: #000;
-    color: #fff;
-    overflow-x: hidden;
+  margin: 0;
+  font-family: Roboto, sans-serif;
+  line-height: 1.4;
+  background: #000;
+  color: #fff;
 }
-
-
-/* =========================================
-   BARRA SUPERIOR
-========================================= */
 
 .top-bar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 15px;
-
-    padding: 1em;
-
-    background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em;
+  background: rgba(0,0,0,0.7);
 }
 
 .logo {
-    font-size: 1.2em;
-    font-weight: bold;
-}
-
-.top-right {
-    display: flex;
-    align-items: center;
-    gap: 1em;
+  font-size: 1.2em;
+  font-weight: bold;
 }
 
 .top-right select,
 .top-right .login-btn {
-    padding: 0.5em 1em;
-    border: none;
-    border-radius: 5px;
-    background: #fff;
-    color: #000;
-    font-size: 0.9em;
+  margin-left: 1em;
+  padding: 0.4em 1em;
+  border: none;
+  border-radius: 5px;
+  background: #fff;
+  color: #000;
 }
-
-.login-btn {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    text-decoration: none;
-}
-
-.login-btn:hover {
-    background-color: #ff7807;
-    color: white;
-    cursor: pointer;
-}
-
-
-/* =========================================
-   SECCIÓN PRINCIPAL
-========================================= */
 
 .hero {
-    position: relative;
-    width: 100%;
-    height: 90vh;
-    min-height: 450px;
-    overflow: hidden;
-    text-align: center;
+  position: relative;
+  text-align: center;
+  height: 90vh;
+  overflow: hidden;
 }
 
-
-/* =========================================
-   CUADRÍCULA DE IMÁGENES
-========================================= */
-
 .grid {
-    position: absolute;
-    inset: 0;
-
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
-    grid-auto-rows: 120px;
-    gap: 1px;
-
-    filter: brightness(0.5);
-    z-index: 1;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  grid-auto-rows: 120px;
+  gap: 1px;
+  filter: brightness(0.5);
 }
 
 .grid img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
-
-
-/* =========================================
-   CONTENEDOR PRINCIPAL
-========================================= */
 
 .overlay {
-    position: absolute;
-
-    top: 50%;
-    left: 50%;
-
-    transform: translate(-50%, -50%);
-
-    width: 90%;
-    max-width: 1100px;
-    height: 90%;
-
-    color: #fff;
-    z-index: 2;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -25%);
+  color: #fff;
+  z-index: 2;
 }
-
-
-/* =========================================
-   VISOR PDF
-========================================= */
-
-.pdf-container {
-    width: 100%;
-    height: 100%;
-    max-height: 800px;
-
-    overflow: hidden;
-    border-radius: 8px;
-}
-
-.pdf-container iframe {
-    width: 100%;
-    height: 100%;
-    display: block;
-    border: none;
-}
-
-
-/* =========================================
-   BOTÓN CTA
-========================================= */
 
 .cta {
-    display: inline-block;
-    padding: 0.8em 1.5em;
-
-    background: #e2545f;
-    border: none;
-    border-radius: 4px;
-
-    color: #fff;
-    font-weight: bold;
-    cursor: pointer;
+  padding: 0.8em 1.5em;
+  background: #e2545f;
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
 }
 
+.benefits {
+  display: flex;
+  justify-content: space-around;
+  background: rgba(0, 0, 0, 0.9);
+  padding: 1em;
+  font-size: 0.9em;
+}
 
-/* =========================================
-   PRESENTACIÓN
-========================================= */
-
-.presentacion {
+.presentacion{
     text-align: center;
     width: 50%;
     height: 85%;
 }
 
-a {
-    text-decoration: none;
+a{
+  text-decoration: none;
 }
 
-
-/* =========================================
-   PIE DE PÁGINA
-========================================= */
-
-.benefits {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-
-    background: rgba(0, 0, 0, 0.9);
-
-    padding: 1em;
-    font-size: 0.9em;
-}
-
-
-/* =========================================
-   TABLETS
-========================================= */
-
-@media screen and (max-width: 768px) {
-
-    .top-bar {
-        justify-content: center;
-        text-align: center;
-        padding: 1em;
-    }
-
-    .logo {
-        width: 100%;
-        font-size: 1.3em;
-    }
-
-    .top-right {
-        justify-content: center;
-        flex-wrap: wrap;
-        gap: 10px;
-    }
-
-    .top-right .login-btn {
-        margin-left: 0;
-    }
-
-    .hero {
-        height: 85vh;
-        min-height: 400px;
-    }
-
-    .overlay {
-        width: 94%;
-        height: 92%;
-    }
-
-    .pdf-container {
-        width: 100%;
-        height: 100%;
-    }
-
-    .grid {
-        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
-        grid-auto-rows: 100px;
-    }
-
-    .presentacion {
-        width: 85%;
-    }
-}
-
-
-/* =========================================
-   CELULARES
-========================================= */
-
-@media screen and (max-width: 480px) {
-
-    .top-bar {
-        flex-direction: column;
-        gap: 15px;
-        padding: 15px 10px;
-    }
-
-    .logo {
-        font-size: 1.1em;
-    }
-
-    .top-right {
-        width: 100%;
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .top-right .login-btn {
-        width: 100%;
-        max-width: 220px;
-        padding: 10px;
-        margin: 0;
-    }
-
-    .hero {
-        height: 80vh;
-        min-height: 350px;
-    }
-
-    .overlay {
-        width: 96%;
-        height: 96%;
-    }
-
-    .pdf-container {
-        width: 100%;
-        height: 100%;
-        border-radius: 5px;
-    }
-
-    .grid {
-        grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
-        grid-auto-rows: 80px;
-    }
-
-    .presentacion {
-        width: 95%;
-        height: auto;
-    }
-
-    .benefits {
-        padding: 15px 10px;
-        font-size: 0.8em;
-    }
-}
-
-
-/* =========================================
-   CELULARES PEQUEÑOS
-========================================= */
-
-@media screen and (max-width: 360px) {
-
-    .logo {
-        font-size: 1em;
-    }
-
-    .hero {
-        height: 75vh;
-    }
-
-    .overlay {
-        width: 98%;
-    }
-
-    .grid {
-        grid-template-columns: repeat(auto-fill, minmax(65px, 1fr));
-        grid-auto-rows: 65px;
-    }
-
+.login-btn:hover {
+  background-color: #ff7807;
+  color: white;
+  cursor: pointer;
 }
